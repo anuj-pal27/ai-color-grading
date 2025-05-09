@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>AI Color Grading | Enhance Photo Colors Instantly - WriteCream AI</title>
+<meta name="description" content="Transform your photos with professional color grading using WriteCream AI's free Color Grading tool. Enhance image colors instantly using advanced AI technology." />
+<meta name="keywords" content="AI Color Grading, photo color enhancement, color correction, AI photo enhancer, free color grading, AI image enhancement, photo color improver, WriteCream AI color grading" />
+<meta name="author" content="WriteCream AI" />
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+<meta name="language" content="English" />
+<meta name="distribution" content="global" />
+<meta name="rating" content="General" />
+<meta name="revisit-after" content="7 days" />
+<meta name="theme-color" content="#ffffff" />
+<meta name="application-name" content="WriteCream AI Color Grading" />
+
+<!-- Canonical -->
+<link rel="canonical" href="https://www.writecream.com/color-grading/" />
+
+<!-- Favicons -->
+<link rel="icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.writecream.com/color-grading/" />
+<meta property="og:title" content="Free AI Color Grading - Professional Photo Enhancement | WriteCream AI" />
+<meta property="og:description" content="Transform your photos with professional color grading instantly with our AI-powered Color Grading tool. Perfect for creating stunning visuals with cinema-quality colors!" />
+<meta property="og:image" content="https://www.writecream.com/wp-content/uploads/2025/03/ai-color-grading-preview.png" />
+<meta property="og:site_name" content="WriteCream AI" />
+<meta property="og:locale" content="en_US" />
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content="https://www.writecream.com/color-grading/" />
+<meta name="twitter:title" content="AI Color Grading - Transform Photos in Seconds | WriteCream AI" />
+<meta name="twitter:description" content="Transform your photos with professional color grading using our free AI tool. No technical skills needed - enhance colors instantly." />
+<meta name="twitter:image" content="https://www.writecream.com/wp-content/uploads/2025/03/ai-color-grading-preview.png" />
+<meta name="twitter:creator" content="@WriteCreamAI" />
+
+<!-- Instagram -->
+<meta property="og:see_also" content="https://www.instagram.com/writecreamai/" />
+<meta name="instagram:site" content="@writecreamai" />
+<meta name="instagram:image" content="https://www.writecream.com/wp-content/uploads/2025/03/ai-color-grading-preview.png" />
+
+<!-- Additional SEO Meta Tags -->
+<meta name="geo.region" content="US" />
+<meta name="geo.placename" content="New York, USA" />
+<meta name="geo.position" content="40.7128;-74.0060" />
+<meta name="ICBM" content="40.7128, -74.0060" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="HandheldFriendly" content="true" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<!-- Schema Markup (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "AI Color Grading - WriteCream AI",
+  "url": "https://www.writecream.com/color-grading/",
+  "description": "Free AI-powered tool for professional color grading and photo enhancement. Transform any photo with cinema-quality colors instantly.",
+  "applicationCategory": "PhotoEnhancementApplication",
+  "operatingSystem": "All",
+  "offers": {
+    "@type": "Offer",
+    "price": "0.00",
+    "priceCurrency": "USD"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "WriteCream AI",
+    "url": "https://www.writecream.com/"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "2250"
+  }
+}
+</script>
+
+<!-- Fonts and CSS -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="main-title fade-in-up">Transform Your Photos with Professional AI Color Grading</h1>
+
+        <div class="intro-text fade-in-up delay-1">
+            <p>Enhance your photos with our advanced AI Color Grading Tool. This free, user-friendly AI tool helps you transform any photo with professional-grade color enhancement in seconds.</p>
+        </div>
+
+        
+
+        <div class="card fade-in-up delay-2" id="uploadSection">
+            <div class="section-header">
+                <h2 class="section-title">
+                    Color Grade Your Image
+                </h2>
+            </div>
+            <div class="actions">
+            <button class="btn btn-primary" id="enhanceBtn">
+                <i class="fas fa-magic"></i>
+                Apply Color Grade
+            </button>
+            <button class="btn btn-primary" id="regenerateImg" style="display: none;">
+                <i class="fas fa-redo"></i>
+                Regenerate Image
+            </button>
+        </div>
+            <div class="upload-wrapper">
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-content">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <h3>Upload Your Image</h3>
+                        <p>Drag & drop your image here or</p>
+                        <button class="btn btn-upload">Browse Files</button>
+                        <input type="file" id="imageInput" accept="image/*" style="display: none;">
+                    </div>
+                </div>
+                <div class="preview-container" id="previewContainer" style="display: none;">
+                    <div class="image-comparison">
+                        <div class="before-image">
+                            <h3>Original</h3>
+                            <img id="originalImage" src="" alt="Original image">
+                        </div>
+                        <div class="after-image">
+                            <h3>Enhanced</h3>
+                            <img id="enhancedImage" src="" >
+                            <div class="result-section" id="resultSection">
+                                <div class="loading-spinner">
+                                    <i class="fas fa-spinner fa-spin"></i>
+                                    <p>Applying color grading to your image...</p>
+                                </div>
+                                <div class="error-message">
+                                    <i class="fas fa-exclamation-circle"></i>
+                                    <p>Something went wrong. Please try again.</p>
+                                </div>
+                                <div class="enhanced-image">
+                                    <img id="enhancedImg" src="">
+      
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="style-selector">
+                <h3>Choose Color Grade Style</h3>
+                <div class="style-options">
+                    <button class="style-option" data-style="cinematic">
+                        <i class="fas fa-film"></i>
+                        Cinematic
+                    </button>
+                    <button class="style-option" data-style="vintage">
+                        <i class="fas fa-camera-retro"></i>
+                        Vintage
+                    </button>
+                    <button class="style-option" data-style="vibrant">
+                        <i class="fas fa-palette"></i>
+                        Vibrant
+                    </button>
+                    <button class="style-option" data-style="moody">
+                        <i class="fas fa-cloud"></i>
+                        Moody
+                    </button>
+                </div>
+            </div>
+
+            <div class="actions">
+ <button class="btn btn-primary" id="downloadBtn" style="display: none;">
+                    <i class="fas fa-download"></i>
+                    Download Color Graded Image
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="features-section fade-in-up delay-2">
+            <h2 class="section-header">
+                Why Choose WriteCream AI's Color Grading Tool?
+            </h2>
+            <div class="features-list">
+                <div class="feature-item">
+                    <i class="fas fa-palette"></i>
+                    <h3>Professional Color Grading</h3>
+                    <p>Transform your photos with cinema-quality color grading using our state-of-the-art AI technology.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-sliders-h"></i>
+                    <h3>Multiple Style Options</h3>
+                    <p>Choose from various color grading styles including cinematic, vintage, vibrant, and moody.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-unlock"></i>
+                    <h3>Free & No Signup Required</h3>
+                    <p>Enhance your images without registration or hidden fees.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="fade-in-up delay-3">
+            <h2 class="card-title">How It Works: Enhance Your Images in Three Simple Steps</h2>
+            <div class="steps-list">
+                <div class="step-item fade-in-left delay-1">
+                    <div class="step-number">1</div>
+                    <h3>Upload Your Image</h3>
+                    <p>Drag and drop or select your photo to enhance</p>
+                </div>
+                <div class="step-item fade-in-left delay-2">
+                    <div class="step-number">2</div>
+                    <h3>Choose Color Grade Style</h3>
+                    <p>Select from cinematic, vintage, vibrant, or moody styles</p>
+                </div>
+                <div class="step-item fade-in-left delay-3">
+                    <div class="step-number">3</div>
+                    <h3>Download Enhanced Image</h3>
+                    <p>Get your professionally color graded image instantly</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="key-features-section fade-in-up delay-4">
+            <h2 class="section-header">
+                Key Features of WriteCream AI's Color Grading Tool
+            </h2>
+            <div class="features-list">
+                <div class="feature-item">
+                    <i class="fas fa-robot"></i>
+                    <h3>AI-Powered Color Science</h3>
+                    <p>Leverage advanced AI algorithms to apply professional-grade color adjustments.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-sliders-h"></i>
+                    <h3>Multiple Color Profiles</h3>
+                    <p>Choose from different color grading styles to match your creative vision.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-expand"></i>
+                    <h3>High-Resolution Output</h3>
+                    <p>Maintain original image quality while applying stunning color effects.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-file-image"></i>
+                    <h3>Multiple Format Support</h3>
+                    <p>Support for various image formats including JPG, PNG, and WebP.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="benefits-section fade-in-up delay-1">
+            <h2 class="section-header">
+                Benefits of Using WriteCream AI's Color Grading Tool
+            </h2>
+            <div class="benefits-list">
+                <div class="benefit-item">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Instant Color Enhancement</h3>
+                    <p>Apply professional color grading to your photos in seconds.</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-image"></i>
+                    <h3>Cinematic Look and Feel</h3>
+                    <p>Give your photos that professional, cinematic color palette.</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-piggy-bank"></i>
+                    <h3>Cost-Effective Solution</h3>
+                    <p>Apply professional color grading for free without expensive software.</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-user-check"></i>
+                    <h3>User-Friendly Interface</h3>
+                    <p>No technical skills required—apply color grades with one click.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="users-section fade-in-up delay-2">
+            <h2 class="section-header">
+                Who Can Benefit from WriteCream AI's Color Grading Tool?
+            </h2>
+            <div class="users-list">
+                <div class="user-item">
+                    <i class="fas fa-camera"></i>
+                    <h3>Photographers</h3>
+                    <p>Apply professional color styles to elevate your photography.</p>
+                </div>
+                <div class="user-item">
+                    <i class="fas fa-history"></i>
+                    <h3>Filmmakers</h3>
+                    <p>Create consistent color palettes for your visual projects.</p>
+                </div>
+                <div class="user-item">
+                    <i class="fas fa-bullhorn"></i>
+                    <h3>Content Creators</h3>
+                    <p>Develop a distinctive visual style for your brand content.</p>
+                </div>
+                <div class="user-item">
+                    <i class="fas fa-users"></i>
+                    <h3>General Users</h3>
+                    <p>Give your personal photos a professional, cinematic look.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="resources-container fade-in-up delay-3">
+            <div class="section-header">
+                <h2>Learn More About AI Color Grading</h2>
+                <div class="header-underline"></div>
+            </div>
+
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="card-header">
+                        <div class="icon-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <div class="tag">Tutorial</div>
+                    </div>
+                    <h3>Best Practices for AI Color Grading</h3>
+                    <p>Learn how to apply professional color grades using our AI-powered tool. Discover tips for choosing the
+                        right color style and optimizing your visual aesthetic.</p>
+                    <a href="#" class="btn-primary">
+                        <span>Read Article</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="card-header">
+                        <div class="icon-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                        </div>
+                        <div class="tag">Tips</div>
+                    </div>
+                    <h3>How AI Color Grading Is Changing The Game</h3>
+                    <p>Elevate your visual content with professional aesthetics. With Writecream's AI Color Grading, you can transform
+                        ordinary photos into cinematic masterpieces—fast, affordable, and perfect for your brand.</p>
+                    <a href="https://www.writecream.com/blog-ai-color-grading/" class="btn-primary">
+                        <span>Read Article</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="card-header">
+                        <div class="icon-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                            </svg>
+                        </div>
+                        <div class="tag">Guide</div>
+                    </div>
+                    <h3>AI Color Grading for Business Growth</h3>
+                    <p>Master the art of using color-graded images to grow your business. Learn how professional color styling
+                        can align with your brand identity and drive customer engagement.</p>
+                    <a href="#" class="btn-primary">
+                        <span>Read Article</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="section-header faq-header">
+                <h2>Frequently Asked Questions</h2>
+                <div class="header-underline"></div>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What types of images can I enhance with this tool?</h3>
+                        <div class="faq-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="plus">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="minus">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our tool can apply professional color grading to all types of images including social media graphics, blog images, ad
+                            banners, product photos, and more. The AI-powered system can enhance virtually any type of visual content you need for your digital
+                            marketing efforts.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do I need design skills to use this tool?</h3>
+                        <div class="faq-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="plus">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="minus">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No, our AI color grading tool is designed to be user-friendly and requires no prior design
+                            experience. The intuitive interface guides you through the process from start to finish.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I customize the images?</h3>
+                        <div class="faq-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="plus">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="minus">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, you can choose from different color grading styles and adjust intensity to match your brand's aesthetics. Our tool offers
+                            multiple color profiles to ensure your graded images perfectly reflect your creative vision and
+                            brand identity.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is there a limit to how many images I can enhance?</h3>
+                        <div class="faq-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="plus">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="minus">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, our AI color grading tool is completely free with no hidden fees. We believe in
+                            making professional color enhancement accessible to everyone regardless of budget constraints.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>For best results, what resolution should I upload images at?</h3>
+                        <div class="faq-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="plus">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="minus">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>For best results, upload images with a resolution of at least 800x600 pixels. Our tool works best with 
+                            decent quality images so the color grading effects can be applied optimally.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What does the AI algorithm do to enhance images?</h3>
+                        <div class="faq-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="plus">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="minus">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our AI algorithm analyzes your images and applies professional color grading techniques,
+                            adjusting color balance, contrast, and tone to create cinematic visual aesthetics.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Enhanced CTA section with improved UI -->
+        <div class="cta-section fade-in-up delay-4">
+            <div class="cta-background">
+                <div class="cta-shape shape-1"></div>
+                <div class="cta-shape shape-2"></div>
+                <div class="cta-shape shape-3"></div>
+                <div class="cta-pattern"></div>
+            </div>
+            <div class="cta-content">
+                <div class="cta-header">
+                    <div class="cta-icon-container">
+                        <i class="fas fa-palette cta-icon-main"></i>
+                        <i class="fas fa-sparkles cta-icon-sparkle"></i>
+                    </div>
+                    <h2>Transform Your Photos with Cinematic Color Grading</h2>
+                </div>
+                <p>Give your photos professional, cinematic color treatment with our AI Color Grading Tool. Apply stunning color styles to any image instantly—all for free, with no registration required!</p>
+                <div class="cta-actions">
+                    <a href="#uploadSection" class="btn btn-cta">
+                        <span class="btn-shine"></span>
+                        <i class="fas fa-upload"></i>
+                        <span>Upload Image Now</span>
+                    </a>
+                    <div class="cta-features">
+                        <div class="cta-feature">
+                            <i class="fas fa-bolt"></i>
+                            <span>Instant Color Grading</span>
+                        </div>
+                        <div class="cta-feature">
+                            <i class="fas fa-film"></i>
+                            <span>Cinematic Styles</span>
+                        </div>
+                        <div class="cta-feature">
+                            <i class="fas fa-unlock"></i>
+                            <span>No Sign-up</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Popups and overlays -->
+        <div class="overlay" id="overlay"></div>
+
+        <div class="limit-modal" id="limitModal">
+            <div class="modal-content">
+                <h3>Daily Limit Reached</h3>
+                <p>You have exceeded the limit. Come back tomorrow or signup for a free account for more enhancements.</p>
+                <button class="btn btn-primary" id="limitModalCloseBtn">
+                    Got it
+                </button>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+</body>
+
+</html>
