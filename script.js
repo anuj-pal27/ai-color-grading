@@ -13,7 +13,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const regenerateBtn = document.getElementById("regenerateImg");
     const previewContainer = document.getElementById("previewContainer");
     const uploadButton = document.querySelector(".btn-upload");
-    
+    const myvideo = document.getElementById("myvideo");
+    myvideo.playbackRate = 2.0; 
     // Setup regenerate button functionality
     function setupRegenerateButton() {
         regenerateBtn.onclick = () => {
@@ -26,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
             resultSection.style.display = "none";
             downloadBtn.style.display = "none";
             regenerateBtn.style.display = "none";
-
+            enhanceBtn.style.display = "none";
             // Clear file input
             imageInput.value = "";
 
@@ -122,6 +123,8 @@ document.addEventListener('DOMContentLoaded', function() {
       enhancedImg.src = e.target.result;
       previewContainer.style.display = "block";
       resultSection.style.display = "block";
+     
+      enhanceBtn.style.display = "block"; // Make enhance button visible
       uploadArea.style.display = "none"; // Hide upload area after file is selected
       regenerateBtn.style.display = "block"; // Make regenerate button visible
     }

@@ -109,7 +109,7 @@
                 </h2>
             </div>
             <div class="actions">
-            <button class="btn btn-primary" id="enhanceBtn">
+            <button class="btn btn-primary" id="enhanceBtn" style="display: none;">
                 <i class="fas fa-magic"></i>
                 Apply Color Grade
             </button>
@@ -121,7 +121,7 @@
             <div class="upload-wrapper">
                 <div class="upload-area" id="uploadArea">
                     <div class="upload-content">
-                        <i class="fas fa-cloud-upload-alt"></i>
+                        <img class="upload-img" src="./assets/upload.svg" />
                         <h3>Upload Your Image</h3>
                         <p>Drag & drop your image here or</p>
                         <button class="btn btn-upload">Browse Files</button>
@@ -233,6 +233,35 @@
                 </div>
             </div>
         </div>
+
+
+<!-- First section with video on left, content on right -->
+<div class="alternating-section fade-in-up delay-1">
+    <div class="section-video">
+      <!-- Updated video tag with proper attributes -->
+      <video  autoplay loop muted playsinline id="myvideo">
+        <source src="assets/vid.mp4" type="video/mp4" >
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="section-content">
+      <h2>The fastest Convert Image to Pixel Art tool</h2>
+      <p>Transform your photos into stunning pixel art with our Convert Image to Pixel Art tool. Create professional-quality pixel art in seconds for social media, games, and creative projects.</p>
+      <a href="#promptSection" class="section-cta">Convert image to pixel art now – no sign up required</a>
+    </div>
+  </div>
+  
+  <!-- Second section (reversed) with content on left, image on right -->
+  <div class="alternating-section fade-in-up delay-2" style="margin-bottom: 2rem;">
+    <div class="section-content">
+      <h2>More free pixel art editing options</h2>
+      <p>Change pixel styles or add text with ease. Explore our library of templates to get inspired and create eye-catching pixel art for any purpose.</p>
+      <a href="#promptSection" class="section-cta">Convert image to pixel art now – no sign up required</a>
+    </div>
+    <div class="section-image">
+      <img src="assets/img.jpg" alt="Editing Options Example" class="single-image">
+    </div>
+  </div>
 
         <div class="key-features-section fade-in-up delay-4">
             <h2 class="section-header">

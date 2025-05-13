@@ -3584,7 +3584,7 @@
       gap: 1.5rem;
       margin: 2rem 0;
       padding: 1rem;
-      background-color: var(--bg-tertiary);
+    
       border-radius: var(--radius-lg);
       box-shadow: var(--shadow-sm);
   }
@@ -3742,9 +3742,8 @@
   .upload-area {
       width: 100%;
       min-height: 300px;
-      border: 2px dashed #4a90e2;
+
       border-radius: 12px;
-      background-color: #f8f9fa;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -3753,11 +3752,7 @@
       margin-bottom: 20px;
   }
   
-  .upload-area:hover {
-      border-color: #357abd;
-      background-color: #f0f7ff;
-  }
-  
+
   .upload-area.dragover {
       border-color: #357abd;
       background-color: #e6f0ff;
@@ -3767,6 +3762,7 @@
   .upload-content {
       text-align: center;
       padding: 40px;
+      margin-top: -100px
   }
   
   .upload-content i {
@@ -3798,7 +3794,7 @@
       transition: all 0.3s ease;
       margin-left: 40px;
   }
-  
+
   .btn-upload:hover {
       background-color: #357abd;
       transform: translateY(-2px);
@@ -3893,7 +3889,7 @@
     gap: 2rem;
     margin: 2rem 0;
     padding: 1.5rem;
-    background: var(--bg-tertiary);
+   
     border-radius: var(--radius-lg);
   }
   
@@ -3943,3 +3939,94 @@
   .color-grade-moody {
     background: linear-gradient(to right, #455a64, #37474f);
   }
+
+  .upload-img{
+    width: 170px;
+    height: 140px;
+    margin-bottom: 20px;
+}
+
+/* Add responsive styles for mobile devices */
+@media (max-width: 768px) {
+    /* Existing styles remain unchanged */
+    
+    /* Enlarge before and after images specifically for mobile */
+    .before-image img, .after-image img, 
+    #originalImage, #enhancedImage, #enhancedImg {
+        max-width: 100% !important; /* Override any existing max-width */
+        width: 100% !important; /* Force full width */
+        height: auto !important; /* Maintain aspect ratio */
+        object-fit: contain; /* Ensure entire image is visible */
+        margin: 0 auto; /* Center the images */
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Add stronger shadow for emphasis */
+        transition: transform 0.3s ease;
+    }
+    
+    /* Increase container size to accommodate larger images */
+    .before-image, .after-image {
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+        width: 100%;
+    }
+    
+    /* Make result section take full width */
+    #resultSection, .enhanced-image {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    /* Ensure the enhanced image container has proper spacing */
+    .enhanced-image {
+        padding: 0.5rem;
+    }
+    
+    /* Reduce button sizes for mobile */
+    .btn, button.btn, 
+    #enhanceBtn, #regenerateImg, #downloadBtn, 
+    .btn-primary, .btn-upload {
+        padding: 0.6rem 1rem !important; /* Smaller padding */
+        font-size: 0.9rem !important; /* Smaller text */
+        min-height: 0 !important; /* Remove minimum height if any */
+        line-height: 1.2 !important; /* Tighter line height */
+    }
+    
+    /* Adjust icon size in buttons */
+    .btn i, button.btn i {
+        font-size: 0.9rem !important; /* Smaller icons */
+        margin-right: 0.4rem !important;
+    }
+    
+    /* Make buttons full width and stack them */
+    .actions {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        margin-top: 1rem;
+        width: 100%;
+    }
+    
+    /* Style specific buttons */
+    #enhanceBtn, #regenerateImg, #downloadBtn {
+        width: 70%; /* Full width buttons on mobile */
+        margin: 0.3rem 0; /* Add some vertical spacing */
+        margin:auto;
+    }
+    
+    /* Adjust style options buttons */
+    .style-option {
+        padding: 0.75rem !important;
+        font-size: 0.85rem !important;
+    }
+    
+    /* Adjust style selector container */
+    .style-selector {
+        padding: 1rem;
+        margin: 1.5rem 0;
+    }
+    
+    .style-selector h3 {
+        font-size: 1rem;
+    }
+}
+
