@@ -143,6 +143,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+  // Function to ensure the enhanced image is always in JPEG format
+function enhanceCloudinaryUrl(url) {
+  return url.replace(
+      "/upload/",
+      "/upload/q_100,f_jpg/"
+  );
+}
   // Enhance button click event
   if(enhanceBtn){
     enhanceBtn.addEventListener('click',async()=>{
@@ -186,12 +193,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 throw new Error("Image processing failed! please try again.");
               }
 
-        function enhanceCloudinaryUrl(url) {
-            return url.replace(
-              "/upload/",
-               "/upload/q_100,f_auto/"
-            );
-          }
+
   
           // Display the enhanced image using the Cloudinary URL
           const enhancedUrl = enhanceCloudinaryUrl(result.cloudinaryUrl);
@@ -201,7 +203,7 @@ document.addEventListener('DOMContentLoaded', function() {
           function makeDownloadableUrl(url) {
             return url.replace(
               "/upload/",
-              "/upload/fl_attachment,q_auto:best,f_auto,dpr_auto/"
+              "/upload/fl_attachment,q_auto:best,f_jpg,dpr_auto/"
             );
           }
   
